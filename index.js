@@ -4,7 +4,7 @@ const nodeMailer = require('nodemailer')
 const TelegramBot = require('node-telegram-bot-api')
 try {require('./config')} catch  {}
 const token = process.env.TOKEN
-const myId = process.env.MYID
+const myId = +process.env.MYID
 const bot = new TelegramBot(token, { polling: true })
 const port = process.env.PORT || 5000
 
