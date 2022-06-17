@@ -17,5 +17,8 @@
 	"bugs": {
 		"url": "https://github.com/Daniil-A4/easy-transportation/issues"
 	},
-	"homepage": "https://github.com/Daniil-A4/easy-transportation#readme"
+	"homepage": "https://github.com/Daniil-A4/easy-transportation#readme",
+	"dependencies": {
+		"node-telegram-bot-api": "^0.57.0"
+	}
 }

@@ -1,6 +1,5 @@
 const { readFileSync } = require('fs')
 const { createServer } = require('http')
-const nodeMailer = require('nodemailer')
 const TelegramBot = require('node-telegram-bot-api')
 try {require('./config')} catch  {}
 const token = process.env.TOKEN
