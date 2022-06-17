@@ -43,11 +43,11 @@ new Swiper('.offer__slider', {
 
 //form to telegram
 const form = document.querySelector('.popup-header__form');
-console.log(form)
 form.addEventListener('submit', () => {
 	const data = Object.fromEntries(new FormData(form))
 	const init = {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(data)}
 	fetch('api/data', init)
+	popupClose(form.closest('.popup'))
 	form.reset()
 })
 
@@ -83,6 +83,7 @@ if (popupCloseIcon.length > 0) {
 		})
 	}
 }
+
 
 function popupOpen(curentPopup) {
 	if (curentPopup && unlock) {

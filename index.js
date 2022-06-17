@@ -2,10 +2,11 @@ const { readFileSync } = require('fs')
 const { createServer } = require('http')
 const nodeMailer = require('nodemailer')
 const TelegramBot = require('node-telegram-bot-api')
-const token = '5387467101:AAFiO4vknWGmmy2n5Y_FcYCFBGRgtmwOc6o'
+try {require('./config')} catch  {}
+const token = process.env.TOKEN
+const myId = process.env.MYID
 const bot = new TelegramBot(token, { polling: true })
-const myId = 593591149
-const port = 5000
+const port = process.env.PORT || 5000
 
 let server = createServer(requestListener)
 
@@ -34,6 +35,9 @@ async function requestListener(request, response) {
 	} else {
 		try {
 			let file = readFileSync(url.slice(1))
+			if (url.endsWith('.svg')) {
+				response.setHeader('content-type', 'image/svg+xml')
+			}
 			response.end(file)
 		} catch (error) {
 			response.end('file not found')

@@ -1,0 +1,21 @@
+{
+	"name": "easy-transpotation",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Daniil-A4/wanted-rent-auto.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Daniil-A4/wanted-rent-auto/issues"
+	},
+	"homepage": "https://github.com/Daniil-A4/wanted-rent-auto#readme"
+}
